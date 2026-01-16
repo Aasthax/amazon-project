@@ -210,6 +210,8 @@ p {
     align-items: center;
     margin-top: auto;
     margin-bottom: auto;
+    opacity: 0;
+    transition: 0.05s;
 }
 .checkmark {
     height: 20px;
