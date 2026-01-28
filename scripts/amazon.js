@@ -11,10 +11,10 @@ products.forEach((product) => {
                 </div>
                 <p class="name">${product.name}</p>
                 <div class="rating">
-                    <img class="rating-stars" src="../assets/rating-${product.rating.stars*10}.png">
+                    <img class="rating-stars" src="${product.getStars()}">
                     <p class="rating-num">${product.rating.count}</p>
                 </div>
-                <p class="price">$${formatCurrency(product.priceCents)}</p>
+                <p class="price">$${product.getPrice()}</p>
                 <select class="quantity js-quantity">
                     <option>1</option>
                     <option>2</option>
