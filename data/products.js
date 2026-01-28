@@ -36,6 +36,22 @@ class Product {
   getPrice() {
     return formatCurrency(this.priceCents);
   }
+
+  extraInfoHTML() {
+    return '';
+  }
+}
+
+class Clothing extends Product {
+  sizeChartLink;
+  constructor(productDetails) {
+    super(productDetails);
+    this.sizeChartLink = productDetails.sizeChartLink;
+  }
+
+  extraInfoHTML() {
+    return `<a href="${this.sizeChartLink}" target="_blank">Size Chart</a>`;
+  }
 }
 
 export const products = [
@@ -83,7 +99,7 @@ export const products = [
       "mens"
     ],
     type: "clothing",
-    sizeChartLink: "images/clothing-size-chart.png"
+    sizeChartLink: "../assets/clothing-size-chart.png"
   },
   {
     id: "54e0eccd-8f36-462b-b68a-8182611d9add",
@@ -207,7 +223,7 @@ export const products = [
       "apparel"
     ],
     type: "clothing",
-    sizeChartLink: "images/clothing-size-chart.png"
+    sizeChartLink: "../assets/clothing-size-chart.png"
   },
   {
     id: "aad29d11-ea98-41ee-9285-b916638cac4a",
@@ -350,7 +366,7 @@ export const products = [
       "apparel"
     ],
     type: "clothing",
-    sizeChartLink: "images/clothing-size-chart.png"
+    sizeChartLink: "../assets/clothing-size-chart.png"
   },
   {
     id: "a93a101d-79ef-4cf3-a6cf-6dbe532a1b4a",
@@ -399,7 +415,7 @@ export const products = [
       "mens"
     ],
     type: "clothing",
-    sizeChartLink: "images/clothing-size-chart.png"
+    sizeChartLink: "../assets/clothing-size-chart.png"
   },
   {
     id: "b86ddc8b-3501-4b17-9889-a3bad6fb585f",
@@ -698,5 +714,8 @@ export const products = [
     ]
   }
 ].map((productDetails) => {
+  if (productDetails.type==='clothing') {
+    return new Clothing(productDetails);
+  }
   return new Product(productDetails);
 });

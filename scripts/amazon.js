@@ -15,18 +15,21 @@ products.forEach((product) => {
                     <p class="rating-num">${product.rating.count}</p>
                 </div>
                 <p class="price">$${product.getPrice()}</p>
-                <select class="quantity js-quantity">
-                    <option>1</option>
-                    <option>2</option>
-                    <option>3</option>
-                    <option>4</option>
-                    <option>5</option>
-                    <option>6</option>
-                    <option>7</option>
-                    <option>8</option>
-                    <option>9</option>
-                    <option>10</option>
-                </select>
+                <div class="quantity-and-size">
+                    <select class="quantity js-quantity">
+                        <option>1</option>
+                        <option>2</option>
+                        <option>3</option>
+                        <option>4</option>
+                        <option>5</option>
+                        <option>6</option>
+                        <option>7</option>
+                        <option>8</option>
+                        <option>9</option>
+                        <option>10</option>
+                    </select>
+                    <div class="sizechart">${product.extraInfoHTML()}</div>
+                </div>
                 <div class="added-container js-added-container">
                     <img class="checkmark" src="../assets/checkmark.png">
                     <p class="added">Added</p>
