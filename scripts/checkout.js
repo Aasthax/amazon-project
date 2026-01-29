@@ -3,7 +3,13 @@ import {renderPaymentSummary} from './checkout/paymentSummary.js';
 // import '../../data/oops/cart-class.js';
 import {loadProductsFetch} from '../data/products.js';
 
-loadProductsFetch().then(() => {
+async function loadPage() {
+    try {
+        await loadProductsFetch();
+    } catch(error) {
+        console.log('Unexpected error. Please try again later.');
+    }
     renderOrderSummary();
     renderPaymentSummary();
-});
+}
+loadPage();

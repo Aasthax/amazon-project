@@ -2,9 +2,15 @@ import {products, loadProductsFetch} from '../data/products.js';
 import {cart, addToCart, updateCartSize} from '../data/cart.js';
 import {formatCurrency} from './utils/money.js';
 
-loadProductsFetch().then(() => {
-    renderProductsGrid();
-});
+async function loadPage() {
+    try {
+        await loadProductsFetch();
+    } catch(error) {
+        console.log('Unexpected error. Please try again later.');
+    }
+    renderProductsGrid()
+}
+loadPage();
 
 function renderProductsGrid() {
     let productHTML = '';
