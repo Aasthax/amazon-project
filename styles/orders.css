@@ -7,82 +7,6 @@ p {
     font-family: Arial, Helvetica, sans-serif;
     margin: 0px;
 }
-.top-bar {
-    background-color: #131921;
-    margin: 0px;
-    display: flex;
-    align-items: center;
-    padding: 15px;
-    justify-content: space-between;
-    position: fixed;
-    width: 100%;
-}
-.logo {
-    height: 40px;
-    margin-left: 20px;
-    margin-right: 20px;
-}
-
-.search-container {
-    display: flex;
-    margin-left: 100px;
-    margin-right: 40px;
-    flex: 1;
-}
-
-.search-box {
-    box-sizing: border-box;
-    height: 42px;
-    width: 100%;
-    min-width: 100px;
-    max-width: 500px;
-    border-top-left-radius: 4px;
-    border-bottom-left-radius: 4px;
-    border: none;
-    font-size: 18px;
-    padding-left: 15px;
-    padding-right: 15px;
-}
-.search-box:focus {
-    border-color: #ecb158;
-    border-width: 2px;
-    border-style: solid;
-    outline: none;
-}
-.search-button {
-    background-color: #ecb158;
-    height: 22px;
-    padding: 10px;
-    border-top-right-radius: 4px;
-    border-bottom-right-radius: 4px;
-}
-.returns {
-    background-color: transparent;
-    color: white;
-    border: none;
-    width: 80px;
-    font-size :14px;
-    text-align: left;
-    margin-left: 20px;
-    margin-right: 20px;
-    font-family: Arial;
-}
-.order-text {
-    font-weight: bold;
-    white-space: nowrap;
-}
-.cart-size {
-    color: #ecb158;
-    position: fixed;
-    margin-left: 41px;
-    margin-top: -3px;
-    font-weight: bold;
-}
-.cart {
-    height: 30px;
-    margin-left: 20px;
-    margin-right: 20px;
-}
 .main-area {
     margin: auto;
     max-width: 800px;
@@ -174,6 +98,7 @@ p {
 }
 .buy-again:hover {
     background-color: #f5cd3a;
+    cursor: pointer;
 }
 .buy-again:active {
     background-color: #eec634;
@@ -194,6 +119,7 @@ p {
 }
 .track:hover {
     background-color: rgb(244, 244, 244);
+    cursor: pointer;
 }
 .track:active {
     background-color: rgb(237, 237, 237);

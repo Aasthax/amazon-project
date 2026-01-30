@@ -193,6 +193,7 @@ input[type="radio"] {
 }
 .order:hover {
     background-color: #f5cd3a;
+    cursor: pointer;
 }
 .order:active {
     background-color: #eec634;

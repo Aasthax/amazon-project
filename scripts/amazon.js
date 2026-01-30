@@ -1,6 +1,7 @@
 import {products, loadProductsFetch} from '../data/products.js';
 import {cart, addToCart, updateCartSize} from '../data/cart.js';
 import {formatCurrency} from './utils/money.js';
+import { getHeaderHTML } from './header.js';
 
 async function loadPage() {
     try {
@@ -13,6 +14,9 @@ async function loadPage() {
 loadPage();
 
 function renderProductsGrid() {
+
+    document.querySelector('.js-header').innerHTML = getHeaderHTML();
+
     let productHTML = '';
 
     products.forEach((product) => {
