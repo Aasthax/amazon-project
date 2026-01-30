@@ -54,7 +54,7 @@ class Clothing extends Product {
   }
 
   extraInfoHTML() {
-    return `<a href="${this.sizeChartLink}" target="_blank">Size Chart</a>`;
+    return `<a href="../assets/clothing-size-chart.png" target="_blank">Size Chart</a>`;
   }
 }
 
