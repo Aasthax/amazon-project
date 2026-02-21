@@ -19,6 +19,11 @@ The project integrates with a **mock backend API** and uses **localStorage for p
 
 ---
 
+🌐 **Live Deployment:**  
+https://aasthax2103.github.io/cart-checkout-project-javascript/components/amazon.html
+
+---
+
 ## ⭐ Key Features
 
 ---
